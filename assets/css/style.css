@@ -5,6 +5,11 @@
 
 /* General style */
 
+html {
+    min-height: 100%;
+    position: relative;
+}
+
 body {
     background-color: rgb(123, 19, 78);
     font-family: "Permanent Marker", sans-serif;
@@ -13,8 +18,59 @@ body {
     color: whitesmoke;
 }
 
+/* Header */
+
 h1 {
     color: whitesmoke;
     text-align: center;
     font-size: 500%;
+}
+
+/* Game area style */
+
+.game-space {
+    background-color: white;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 65vh;
+    max-height: 450px;
+    max-width: 830px;
+    margin-top: 1%;
+    text-align: center;
+    padding: 1%;
+
+}
+
+.dice {
+    text-align: center;
+    display: inline-block;
+    color: black;
+    margin: 10%;
+    font-size: 300%;
+
+}
+
+/* Buttons */
+
+.interactive-space {
+    display: flex;
+	flex-direction: row;
+	flex-wrap: wrap
+
+	justify-content: center;
+	align-items: center;
+
+}
+
+.firstplayer, .dice1 {
+
+}
+
+.secondplayer, .dice2 {
+
+}
+
+p {
+   
 }
