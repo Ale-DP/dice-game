@@ -34,9 +34,10 @@ h1 {
     margin-left: auto;
     margin-right: auto;
     height: 65vh;
-    max-height: 450px;
-    max-width: 830px;
+    max-height: 30em;
+    max-width: 52em;
     margin-top: 1%;
+    margin-bottom: 1em;
     text-align: center;
     padding: 1%;
 
@@ -54,23 +55,19 @@ h1 {
 /* Buttons */
 
 .interactive-space {
-    display: flex;
-	flex-direction: row;
-	flex-wrap: wrap
-
-	justify-content: center;
-	align-items: center;
+    text-align: center;
 
 }
 
-.firstplayer, .dice1 {
-
+button {
+    border-radius: 5px;
+    font-family: "Permanent Marker", sans-serif, cursive;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    margin-top: 0.5em;
 }
 
-.secondplayer, .dice2 {
-
-}
-
-p {
-   
+.click {
+    font-size: 1.5em;
+    
 }
