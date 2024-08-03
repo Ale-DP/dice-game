@@ -67,7 +67,7 @@ button {
     margin-top: 0.5em;
 }
 
-.click {
+#change-name , #play-game {
     font-size: 1.5em;
     
 }
