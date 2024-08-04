@@ -42,4 +42,39 @@ document.getElementById("humanplayer").alt = result[randomNumber1]
 
 document.getElementById("robotplayer").src = `assets/images/${result[randomNumber2]}.png`
 document.getElementById("robotplayer").alt = result[randomNumber2]
+
+
+//
+if (randomNumber1 > randomNumber2) {
+    winningScore();
+}
+else if (randomNumber1 < randomNumber2) {
+    looseScore();
+}
+else {
+    drawScore()
+}
+}
+
+//
+function winningScore() {
+    let temporaryScoreH = parseInt(document.getElementById("temp-human-score").innerText);
+    document.getElementById("temp-human-score").innerText = temporaryScoreH += 1;
+    if (temporaryScoreH === 3) {
+        winner();
+    }
+    else {
+        looser()
+    }
+}
+
+function looseScore() {
+    let temporaryScoreR = parseInt(document.getElementById("temp-robot-score").innerText);
+    document.getElementById("temp-robot-score").innerText = temporaryScoreR += 1;
+    if (temporaryScoreR === 3) {
+        winner();
+    }
+    else {
+        looser()
+    }
 }
