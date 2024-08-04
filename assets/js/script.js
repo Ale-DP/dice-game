@@ -11,11 +11,14 @@ let playersbutton = document.getElementById("change-name");
 // Add event listener to player button
 
 playersbutton.addEventListener("click", function() {
-    firstplayer = prompt("Edit first player name");
-    secondplayer = prompt("Edit second player name");
+    document.getElementById("firstplayer");
+    document.getElementById("secondplayer");
 
-    document.querySelector("Firstplayer").innerContent = firstplayer;
-    document.querySelector("Secondplayer").innerContent = secondplayer;
+    let firstplayer = prompt("Edit first player name");
+    let secondplayer = prompt("Edit second player name");
+
+    document.getElementById("Firstplayer").innerText = firstplayer;
+    document.getElementById("Secondplayer").innerText = secondplayer;
 
 })
   
@@ -31,8 +34,8 @@ document.getElementById("play-game").addEventListener("click", rollDice);
 
 // Function to roll the dice
 function rollDice() {
-    let randomNumber1 = Math.floor(Math.random() * 6) + 1;
-    let randomNumber2 = Math.floor(Math.random() * 6) + 1;
+    let randomNumber1 = Math.floor(Math.random() * 6);
+    let randomNumber2 = Math.floor(Math.random() * 6);
 
 document.getElementById("humanplayer").src = `assets/images/${result[randomNumber1]}.png`
 document.getElementById("humanplayer").alt = result[randomNumber1]
