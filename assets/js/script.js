@@ -29,10 +29,12 @@ let rollbutton = document.getElementById("play-game");
 
 
 // Add event listener to roll button
+
 document.getElementById("play-game").addEventListener("click", rollDice);
 
 
 // Function to roll the dice
+
 function rollDice() {
     let randomNumber1 = Math.floor(Math.random() * 6);
     let randomNumber2 = Math.floor(Math.random() * 6);
@@ -44,7 +46,8 @@ document.getElementById("robotplayer").src = `assets/images/${result[randomNumbe
 document.getElementById("robotplayer").alt = result[randomNumber2]
 
 
-//
+// Score calculation
+
 if (randomNumber1 > randomNumber2) {
     winningScore();
 }
@@ -56,7 +59,12 @@ else {
 }
 }
 
-//
+
+/**
+ * Increase temporaryScoreH of 1
+ * and let human player win when reaching 3 points
+ */
+
 function winningScore() {
     let temporaryScoreH = parseInt(document.getElementById("temp-human-score").innerText);
     document.getElementById("temp-human-score").innerText = temporaryScoreH += 1;
@@ -67,6 +75,12 @@ function winningScore() {
         looser()
     }
 }
+
+
+/**
+ * Increase temporaryScoreR of 1
+ * and let robot player win when reaching 3 points
+ */
 
 function looseScore() {
     let temporaryScoreR = parseInt(document.getElementById("temp-robot-score").innerText);
