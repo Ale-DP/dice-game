@@ -77,3 +77,27 @@ button {
     font-size: 10em;
 }
 
+
+/* Media queries */
+
+@media (max-width: 414px) {
+    .interactive-space{
+        width: 100%;
+    }
+}
+
+@media (max-width: 320px) {
+    .game-space {
+        height: 70vh;
+    }
+
+    .interactive-space {
+        width: 75%;
+        margin: 10px auto;
+    }
+
+    button {
+        width: 75%;
+        margin: 10px auto;
+    }
+}
