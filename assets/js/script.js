@@ -65,39 +65,95 @@ else {
  * and let human player win when reaching 3 points
  */
 
-function score(player) {
-    let tempScoreDisplay;
-    if (player === 'human') {
-        tempScoreDisplay = document.getElementById("temp-human-score");
-    }
-    else {
-        tempScoreDisplay = document.getElementById("temp-robot-score")
-    }
-}
-    let temporaryScore = parseInt(tempScoreDisplay.innerText);
-    tempScoreDisplay.innerText = temporaryScore += 1;
-    if (temporaryScore === 3) {
+function winningScore() {
+    let temporaryScoreH = parseInt(document.getElementById("temp-human-score").innerText);
+    document.getElementById("temp-human-score").innerText = temporaryScoreH += 1;
+    if (temporaryScoreH === 3) {
         winner();
     }
+    
+}
 
-    else {
-        loseScore()
-    }
+// Add alert when winning the game
+
+function winner() {
+    document.getElementById("endgame").classList.remove("hide");
+    
+    const endGame = document.createElement("p");
+    endGame.setAttribute("id","humanWin");
+    endGame.innerHTML = "You Win !";
+    document.getElementById("endgame").innerHTML = ""
+    document.getElementById("endgame").appendChild(endGame)
+
+    retryRoll()
+}
+
+// Add button for restarting the game ended
+
+function retryRoll() {
+    let button = document.createElement("button");
+    button.setAttribute("id","retry-roll");
+    button.innerHTML = "Try to roll again!"
+
+    button.addEventListener("click",function() {
+        document.getElementById("endgame").classList.add("hide");
+        rollDice()
+    }) 
+
+    document.getElementById("endgame").appendChild(button)
+}
+
+
+
 
 /**
- * Increase temporaryScore of 1
+ * Increase temporaryScoreR of 1
  * and let robot player win when reaching 3 points
  */
 
 function loseScore() {
-    const tempScoreDisplay = document.getElementById("temp-robot-score");
+    let temporaryScoreR = parseInt(document.getElementById("temp-robot-score").innerText);
+    document.getElementById("temp-robot-score").innerText = temporaryScoreR += 1;
+    if (temporaryScoreR === 3) {
+        loser();
+    }
+    
+}
 
-    let temporaryScore = parseInt(tempScoreDisplay.innerText);
-    tempScoreDisplay.innerText = temporaryScore += 1;
-    if (temporaryScore === 3) {
+// Add alert when losing the game and robot win
+
+function loser() {
+    document.getElementById("endgame").classList.remove("hide");
+    
+    const endGame = document.createElement("p");
+    endGame.setAttribute("id","robotWin");
+    endGame.innerHTML = "You Lose !";
+    document.getElementById("endgame").innerHTML = ""
+    document.getElementById("endgame").appendChild(endGame)
+
+    retryRoll()
+}
+
+// Attempted modification as per step 4
+/*
+function winningScore() {
+    let temporaryScoreH = parseInt(document.getElementById("temp-human-score").innerText);
+    document.getElementById("temp-human-score").innerText = temporaryScoreH += 1;
+    if (temporaryScoreH === 3) {
         winner();
     }
     else {
-        looser()
+        loser()
     }
 }
+
+function looseScore() {
+    let temporaryScoreR = parseInt(document.getElementById("temp-robot-score").innerText);
+    document.getElementById("temp-robot-score").innerText = temporaryScoreR += 1;
+    if (temporaryScoreR === 3) {
+        winner();
+    }
+    else {
+        loser()
+    }
+}*/
