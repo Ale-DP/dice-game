@@ -52,7 +52,7 @@ if (randomNumber1 > randomNumber2) {
     winningScore();
 }
 else if (randomNumber1 < randomNumber2) {
-    looseScore();
+    loseScore();
 }
 else {
     drawScore()
@@ -65,27 +65,36 @@ else {
  * and let human player win when reaching 3 points
  */
 
-function winningScore() {
-    let temporaryScoreH = parseInt(document.getElementById("temp-human-score").innerText);
-    document.getElementById("temp-human-score").innerText = temporaryScoreH += 1;
-    if (temporaryScoreH === 3) {
-        winner();
+function score(player) {
+    let tempScoreDisplay;
+    if (player === 'human') {
+        tempScoreDisplay = document.getElementById("temp-human-score");
     }
     else {
-        looser()
+        tempScoreDisplay = document.getElementById("temp-robot-score")
     }
 }
+    let temporaryScore = parseInt(tempScoreDisplay.innerText);
+    tempScoreDisplay.innerText = temporaryScore += 1;
+    if (temporaryScore === 3) {
+        winner();
+    }
 
+    else {
+        loseScore()
+    }
 
 /**
- * Increase temporaryScoreR of 1
+ * Increase temporaryScore of 1
  * and let robot player win when reaching 3 points
  */
 
-function looseScore() {
-    let temporaryScoreR = parseInt(document.getElementById("temp-robot-score").innerText);
-    document.getElementById("temp-robot-score").innerText = temporaryScoreR += 1;
-    if (temporaryScoreR === 3) {
+function loseScore() {
+    const tempScoreDisplay = document.getElementById("temp-robot-score");
+
+    let temporaryScore = parseInt(tempScoreDisplay.innerText);
+    tempScoreDisplay.innerText = temporaryScore += 1;
+    if (temporaryScore === 3) {
         winner();
     }
     else {
