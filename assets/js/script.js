@@ -11,14 +11,12 @@ let playersbutton = document.getElementById("change-name");
 // Add event listener to player button
 
 playersbutton.addEventListener("click", function() {
-    document.getElementById("firstplayer");
-    document.getElementById("secondplayer");
-
+    
     let firstplayer = prompt("Edit first player name");
     let secondplayer = prompt("Edit second player name");
 
-    document.getElementById("Firstplayer").innerText = firstplayer;
-    document.getElementById("Secondplayer").innerText = secondplayer;
+    document.getElementById("firstplayer").innerText = firstplayer;
+    document.getElementById("secondplayer").innerText = secondplayer;
 
 })
   
