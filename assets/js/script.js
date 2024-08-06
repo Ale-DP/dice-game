@@ -23,12 +23,12 @@ playersbutton.addEventListener("click", function() {
 
 // Get roll button element
 
-let rollbutton = document.getElementById("play-game");
+let rollButton = document.getElementById("play-game");
 
 
 // Add event listener to roll button
 
-document.getElementById("play-game").addEventListener("click", rollDice);
+rollButton.addEventListener("click", rollDice);
 
 
 // Function to roll the dice
