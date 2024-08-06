@@ -1,7 +1,8 @@
 // Declare all constants
 
 const result = ["dice-1", "dice-2", "dice-3", "dice-4", "dice-5", "dice-6"];
-
+const humanPlayerImage = document.getElementById("humanplayer");
+const robotPlayerImage = document.getElementById("robotplayer");
 
 // Get player button element
 
@@ -37,11 +38,12 @@ function rollDice() {
     let randomNumber1 = Math.floor(Math.random() * 6);
     let randomNumber2 = Math.floor(Math.random() * 6);
 
-document.getElementById("humanplayer").src = `assets/images/${result[randomNumber1]}.png`
-document.getElementById("humanplayer").alt = result[randomNumber1]
 
-document.getElementById("robotplayer").src = `assets/images/${result[randomNumber2]}.png`
-document.getElementById("robotplayer").alt = result[randomNumber2]
+    humanPlayerImage.src = `assets/images/${result[randomNumber1]}.png`;
+    humanPlayerImage.alt = result[randomNumber1];
+
+    robotPlayerImage.src = `assets/images/${result[randomNumber2]}.png`;
+    robotPlayerImage.alt = result[randomNumber2];
 
 
 // Score calculation
