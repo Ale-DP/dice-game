@@ -79,8 +79,7 @@ button {
     z-index: 90;
     width: 80%;
     height: 300px;
-    background-color: red;
-
+    background-color: rgba(75, 14, 49, 0.8);
 }
 
 .score-area {
@@ -88,6 +87,48 @@ button {
     font-size: 4em;
     display: flex;
     justify-content: space-around;
-    margin-left: 0.6em;
+    margin-left: 0.5em;
 }
 
+/* Media queries */
+@media (max-width: 375px) {
+    .dice {
+        width: 80px;
+        height: 80px;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .game-space {
+        height: 36vh;
+    }
+
+    .score-area  {
+        font-size: 3em;
+        margin-left: 0.7em;
+    }
+
+    h1 {
+        font-size: 165%;
+    }
+
+    #endgame {
+        top: 3em;
+        left: 1em;
+        width: 87%;
+        height: 273px;
+    }
+}
+
+@media (max-width: 768px) {
+    .dice {
+        font-size: 224%;
+    }
+
+    h1 {
+        font-size: 350%;
+    }
+    .score-area {
+        margin-left: 2em;
+    }
+}
