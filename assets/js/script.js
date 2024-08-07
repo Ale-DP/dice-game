@@ -1,3 +1,9 @@
+// Turn off EC6 warning
+/*jshint esversion: 6 */
+
+// Turn off semicolon warning
+/*jshint -W033 */
+
 // Declare all constants
 const result = ["dice-1", "dice-2", "dice-3", "dice-4", "dice-5", "dice-6"];
 const humanPlayerImage = document.getElementById("humanplayer");
