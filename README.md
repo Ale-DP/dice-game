@@ -36,23 +36,21 @@ thanks to https://www.shutterstock.com/it/image-vector/white-3d-cube-casino-boar
 
 # Testing
 
-![Screenshot of the table with a summary of the tests](assets/media/testing-table.png)
+![Screenshot of the table with a summary of the tests](assets/media/testing.png)
 -Checked code on https://beautifier.io/ and https://prettier.io/
 
 - Validator Testing : 
 
 [HTML Validator link](https://validator.w3.org/)
 
-![Screenshot from HTML Validator for the home page](assets/media/home-html-validation.png)
-
-![Screenshot from HTML Validator for the contact page](assets/media/contact-html-validation.png)
-
-![Screenshot from HTML Validator for the gallery page](assets/media/gallery-html-validation.png)
-    - Gallery shows a warning but a section is more accurate than another div or heading not required here
+![Screenshot from HTML Validator](assets/media/htmlvalidator-pass.png)
 
 [CSS Validator link](https://jigsaw.w3.org/css-validator/)
 
-![Screenshot from CSS Validator](assets/media/css-validation-pass.png)
+![Screenshot from CSS Validator](assets/media/cssvalidator-pass.png)
+
+[JS Validator link](https://jshint.com/)
+![Screenshot from JS Validator](assets/media/jsvalidator.png)
 
 - Testing has been carried out on the following browsers :
     - Chrome Version 126.0.6478.127 (Official Build) (arm64)
@@ -76,7 +74,7 @@ Any changes pushed to the master branch will take effect on the live project
 
 # How to clone the repository
 
-- Go to the https://github.com/Ale-DP/videogames-passion/deployments/github-pages repository on GitHub
+- Go to the https://github.com/Ale-DP/dice-game/deployments/github-pages repository on GitHub
 - Click the "Code" button to the right of the screen, click HTTPs and copy the link there
 - Open a GitBash terminal and navigate to the directory where you want to locate the clone
 - On the command line, type "git clone" then paste in the copied url and press the Enter key to begin the clone process
