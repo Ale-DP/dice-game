@@ -9,10 +9,6 @@ const result = ["dice-1", "dice-2", "dice-3", "dice-4", "dice-5", "dice-6"];
 const humanPlayerImage = document.getElementById("humanplayer");
 const robotPlayerImage = document.getElementById("robotplayer");
 
-
-// Get player button element
-let playersbutton = document.getElementById("change-name");
-
 // Get roll button element
 let rollButton = document.getElementById("play-game");
 
