@@ -63,7 +63,7 @@ button {
     margin-top: 0.5em;
 }
 
-#change-name , #play-game {
+#play-game {
     font-size: 1.5em;
     
 }
@@ -91,29 +91,3 @@ button {
     margin-left: 0.6em;
 }
 
-/*
- Media queries 
-
-@media (max-width: 414px) {
-    .interactive-space{
-        width: 100%;
-    }
-}
-
-@media (max-width: 320px) {
-    .game-space {
-        height: 70vh;
-    }
-
-    .interactive-space {
-        width: 75%;
-        margin: 10px auto;
-    }
-
-    button {
-        width: 75%;
-        margin: 10px auto;
-    }
-}
-
-*/
