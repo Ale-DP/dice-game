@@ -91,12 +91,25 @@ button {
 }
 
 /* Media queries */
+@media (max-width: 768px) {
+    .dice {
+        font-size: 224%;
+    }
+
+    h1 {
+        font-size: 350%;
+    }
+    .score-area {
+        margin-left: 2em;
+    }
+}
 @media (max-width: 375px) {
     .dice {
         width: 80px;
         height: 80px;
         display: flex;
         justify-content: space-around;
+        font-size: 120%;
     }
 
     .game-space {
@@ -117,18 +130,5 @@ button {
         left: 1em;
         width: 87%;
         height: 273px;
-    }
-}
-
-@media (max-width: 768px) {
-    .dice {
-        font-size: 224%;
-    }
-
-    h1 {
-        font-size: 350%;
-    }
-    .score-area {
-        margin-left: 2em;
     }
 }
