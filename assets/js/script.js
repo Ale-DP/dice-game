@@ -13,7 +13,11 @@ let rollButton = document.getElementById("play-game");
 // Add event listener to roll button
 rollButton.addEventListener("click", rollDice);
 
-// Function to roll the dice
+/**
+ * Main button to play the game
+ * and allow to roll dices to both players
+ * that get points based on that
+ */
 function rollDice() {
     let randomNumber1 = Math.floor(Math.random() * 6);
     let randomNumber2 = Math.floor(Math.random() * 6);
@@ -54,7 +58,6 @@ function winner() {
     endGame.innerHTML = "You Win !";
     document.getElementById("endgame").innerHTML = ""
     document.getElementById("endgame").appendChild(endGame)
-
     retryRoll()
 }
 
@@ -72,13 +75,10 @@ function retryRoll() {
     // Reset score to o
     document.getElementById("temp-human-score").innerText = "0";
     document.getElementById("temp-robot-score").innerText = "0";
-
     rollDice()
     }) 
-
     document.getElementById("endgame").appendChild(button)
 }
-
 
 /**
  * Increase temporaryScoreR of 1
@@ -101,6 +101,5 @@ function loser() {
     endGame.innerHTML = "You Lose !";
     document.getElementById("endgame").innerHTML = ""
     document.getElementById("endgame").appendChild(endGame)
-
     retryRoll()
 }
